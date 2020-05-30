@@ -12,9 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let simpleCoffee = SimpleCoffee()
+        let simpleCoffeeWithMilk = Milk(base: simpleCoffee)
+        let simpleCoffeeWithMilkWhip = Whip(base: simpleCoffeeWithMilk)
+        let simpleCoffeeWithMilkWhipSugar = Sugar(base: simpleCoffeeWithMilkWhip)
+        print("Оплатите \(simpleCoffeeWithMilkWhipSugar.cost) рублей")
     }
-
-
 }
 
